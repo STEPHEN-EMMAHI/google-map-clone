@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://google-maps-clone-henna.vercel.app/sitemap.xml
