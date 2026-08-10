@@ -1,10 +1,7 @@
-# goggle-map-clone
+# google-map clone
 
-## Project OverView
+# How to run project
 
-A project that teaches how to clone google maps.
+# Concepts Learnt
 
-## Concepts
-
-1. Leaflet.js library for map rendering, zooming, dragging and markers.
-2. OpenStreetMap(OSM) provides free map tiles.
+1. How to setup mapBox - A javascript library for creating maps.
