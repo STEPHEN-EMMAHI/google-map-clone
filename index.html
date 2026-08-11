@@ -6,10 +6,24 @@
     <meta name="description" content="A project to learn google map clone" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/view/style.css" />
+    <!-- 1. Mapbox GL JS (CSS & JS) -->
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.css"
+      rel="stylesheet"
+    />
+
+    <!-- 2. Mapbox Directions Plugin (CSS & JS) -->
+    <link
+      rel="stylesheet"
+      href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.2.0/mapbox-gl-directions.css"
+      type="text/css"
+    />
     <title>google-maps-clone</title>
   </head>
   <body>
-    <div id="map" class="h-screen"></div>
+    <div id="map" class="h-screen overflow-x-auto"></div>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.2.0/mapbox-gl-directions.js"></script>
     <script type="module" src="/src/controller/main.js"></script>
   </body>
 </html>

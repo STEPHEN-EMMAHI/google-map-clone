@@ -1,9 +1,3 @@
-import mapboxgl from "mapbox-gl";
-import "mapbox-gl/dist/mapbox-gl.css";
-
-import MapboxDirections from "@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions";
-import "@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions.css";
-
 // Provide access token from the Mapbox account dashboard
 mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN;
 
@@ -27,7 +21,24 @@ function setupMap(center) {
     container: "map", // ID of the HTML element container
     style: "mapbox://styles/mapbox/streets-v12", // Map style URL
     center: center,
-    zoom: 14,
+    zoom: 15,
+  });
+
+  // fixing button accessibilty audit
+  map.on("load", () => {
+    const attribBtn = document.querySelector(".mapbox-ctrl-attrib-button");
+    if (attribBtn) {
+      attribBtn.setAttribute("arial-label", "Toggle map attribution");
+    }
+  });
+
+  // wait for the map to load then add markers
+  map.on("load", () => {
+    const marker = new mapboxgl.Marker({
+      color: "red",
+    })
+      .setLngLat(center)
+      .addTo(map);
   });
 
   // navigation controls
