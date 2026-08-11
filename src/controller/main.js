@@ -43,11 +43,14 @@ function setupMap(center) {
 
   // navigation controls
   const nav = new mapboxgl.NavigationControl();
-  map.addControl(nav, "top-left");
+  map.addControl(nav, "top-right");
 
   // mapbox directions
   const directions = new MapboxDirections({
     accessToken: import.meta.env.VITE_MAPBOX_ACCESS_TOKEN,
+    controls: {
+      instructions: false,
+    },
   });
 
   map.addControl(directions, "top-left");
