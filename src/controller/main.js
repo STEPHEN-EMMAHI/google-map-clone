@@ -49,7 +49,7 @@ function setupMap(center) {
   const directions = new MapboxDirections({
     accessToken: import.meta.env.VITE_MAPBOX_ACCESS_TOKEN,
     controls: {
-      instructions: false,
+      instructions: true,
     },
   });
 

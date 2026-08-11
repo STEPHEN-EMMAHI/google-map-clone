@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+@media screen and (max-width: 48em) {
+  .mapboxgl-ctrl-directions {
+    max-height: 40vh;
+    overflow-y: auto;
+  }
+
+  .directions-instructions {
+    max-height: 150px;
+    overflow-y: auto;
+  }
+}
