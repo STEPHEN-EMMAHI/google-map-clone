@@ -56,3 +56,7 @@ MVC Architecture
 2. Geolocation API
 3. MapBox navigation control
 4. MapBox plugins
+
+## Limitations
+
+1. Perfromance issues
